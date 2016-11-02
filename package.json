@@ -1,0 +1,19 @@
+{
+  "name": "spaghettiquery",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "webpack"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-latest": "^6.16.0",
+    "html-webpack-plugin": "^2.22.0",
+    "mustache": "^2.2.1",
+    "webpack": "^1.13.2"
+  }
+}
