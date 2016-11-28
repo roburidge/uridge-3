@@ -1,10 +1,10 @@
-import component from './component'
-import cats from './cats'
+import component from './component';
+import './main.css';
+// import cats from './cats'
+
 // import $ from 'jquery'
 
-const body = document.querySelector('body');
-console.log(body);
-
+document.body.appendChild(component());
 
 // $(component()).appendTo('body')
 // $('<h1>Cats</h1>').appendTo('body')

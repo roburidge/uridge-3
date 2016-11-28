@@ -1,7 +1,9 @@
 const component = () => {
   const element = document.createElement('h1')
 
-  element.innerHTML = 'Hello world!'
+    console.log('hello world');
+
+    element.innerHTML = 'Rob Uridge no 🐛\'s'
 
   return element
 }

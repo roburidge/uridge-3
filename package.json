@@ -1,8 +1,9 @@
 {
-  "name": "spaghettiquery",
+  "name": "www.uridge.com",
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "start": "webpack-dev-server",
     "build": "webpack"
   },
   "dependencies": {
@@ -12,8 +13,14 @@
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
     "babel-preset-latest": "^6.16.0",
+    "babel-register": "^6.18.0",
+    "css-loader": "^0.26.0",
     "html-webpack-plugin": "^2.22.0",
     "mustache": "^2.2.1",
-    "webpack": "^1.13.2"
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2",
+    "webpack-merge": "^0.18.0",
+    "webpack-validator": "^2.2.9"
   }
 }
