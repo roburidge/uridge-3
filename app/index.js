@@ -1,14 +1,21 @@
 import component from './component';
 import './main.css';
-// import cats from './cats'
 
-// import $ from 'jquery'
+let demoComponent = component();
 
-document.body.appendChild(component());
+document.body.appendChild(demoComponent);
 
-// $(component()).appendTo('body')
-// $('<h1>Cats</h1>').appendTo('body')
-// const ul = $('<ul></ul>').appendTo('body')
-// for (const cat of cats) {
-//   $('<li></li>').text(cat).appendTo(ul)
-// }
+// HMR interface
+if(module.hot) {
+  // Capture hot update
+  module.hot.accept('./component', () => {
+    // We have to go through CommonJS here and capture the
+    // default export explicitly!
+    const nextComponent = require('./component').default();
+
+    // Replace old content with the hot loaded one
+    document.body.replaceChild(nextComponent, demoComponent);
+
+    demoComponent = nextComponent;
+  });
+}

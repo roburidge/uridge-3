@@ -2,7 +2,7 @@ import path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import merge from 'webpack-merge'
 import validate from 'webpack-validator'
-import parts from './libs/parts'
+import parts from './webpack.parts'
 
 const PATHS = {
   app: path.join(__dirname, 'app'),

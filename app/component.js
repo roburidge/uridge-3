@@ -1,11 +1,15 @@
+import catComponent from './cats'
+
 const component = () => {
-  const element = document.createElement('h1')
+    const component = document.createElement('div');
 
-    console.log('hello world');
+    const h1 = document.createElement('h1');
+    h1.textContent = 'No 🐛\'s + 🔥-reloading!';
+    component.appendChild(h1);
 
-    element.innerHTML = 'Rob Uridge no 🐛\'s'
+    component.appendChild(catComponent());
 
-  return element
+    return component;
 }
 
-export default component
+export default component;
