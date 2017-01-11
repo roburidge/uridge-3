@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "test:lint": "eslint . --cache",
     "start": "webpack-dev-server",
     "build": "webpack"
   },
@@ -15,6 +16,7 @@
     "babel-preset-latest": "^6.16.0",
     "babel-register": "^6.18.0",
     "css-loader": "^0.26.0",
+    "eslint": "^3.13.1",
     "html-webpack-plugin": "^2.22.0",
     "mustache": "^2.2.1",
     "style-loader": "^0.13.1",

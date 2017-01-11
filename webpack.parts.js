@@ -34,7 +34,7 @@ exports.devServer = function(options) {
       })
     ]
   };
-}
+};
 
 
 exports.setupCSS = function(paths) {
@@ -49,4 +49,4 @@ exports.setupCSS = function(paths) {
       ]
     }
   };
-}
+};

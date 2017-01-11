@@ -1,13 +1,13 @@
-import path from 'path'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
-import merge from 'webpack-merge'
-import validate from 'webpack-validator'
-import parts from './webpack.parts'
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import merge from 'webpack-merge';
+import validate from 'webpack-validator';
+import parts from './webpack.parts';
 
 const PATHS = {
   app: path.join(__dirname, 'app'),
   build: path.join(__dirname, 'build')
-}
+};
 
 const common = {
   // Entry accepts a path or an object of entries.
@@ -42,34 +42,34 @@ const common = {
       title: 'uridge.com'
     })
   ]
-}
+};
 
 var config;
 
 // Detect how npm is run and branch based on that
 switch(process.env.npm_lifecycle_event) {
-  case 'build':
-    config = merge(
-      common,
-      {
-        devtool: 'source-map'
-      },
-      parts.setupCSS(PATHS.app)
-    );
-    break;
-  default:
-    config = merge(
-      common,
-      {
-        devtool: 'eval-source-map'
-      },
-      parts.setupCSS(PATHS.app),
-      parts.devServer({
-        // Customize host/port here if needed
-        host: process.env.HOST,
-        port: process.env.PORT
-      })
-    );
+case 'build':
+  config = merge(
+    common,
+    {
+      devtool: 'source-map'
+    },
+    parts.setupCSS(PATHS.app)
+  );
+  break;
+default:
+  config = merge(
+    common,
+    {
+      devtool: 'eval-source-map'
+    },
+    parts.setupCSS(PATHS.app),
+    parts.devServer({
+      // Customize host/port here if needed
+      host: process.env.HOST,
+      port: process.env.PORT
+    })
+  );
 }
 
 module.exports = validate(config);
